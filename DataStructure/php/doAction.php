@@ -3,6 +3,7 @@
 require_once '../swiftmailer_lib/swift_required.php';
 require_once 'PdoMySQL.class.php';
 require_once 'config.php';
+require_once 'pwd.php';
 
 //2.接收信息
 $act = $_GET['act'];
@@ -10,10 +11,33 @@ $username = addslashes($_POST['username']);
 $password = md5($_POST['password']);
 // $password = md5($_POST['password'], raw_output);
 $email = $_POST['email'];
+$table = 'pdo_users';
 if ($act === 'reg') {
-	# code...
-	//
-	/**/
+	#  comment 1
+	// comment 2
+	/* comments 3*/
+	# 时间戳
+	$register_time = time();
+	# 令牌
+	$token = md5($username.$password.$register_time);
+	# expire time
+	$token_expire = $register_time+24*3600;
+	# status 0; 默认： 未激活
+	$data = compact('username','password','email','token','token_expire','register_time');
+	$res = $PdoMySQL -> add($data,$table);
+	if ($res) {
+		# send email  QQ ?
+		$transport = Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		//?  smtp-mail.outlook.com 587/25
+		# http://email.about.com/od/Outlook.com/f/What-Are-The-Outlook-com-Smtp-Server-Settings.htm
+	} else {
+		echo "register failure!: 3 seconds redirect to register page!";
+		echo "<meta http-equiv='refresh' content='3 ;url=index.php#toregister'/>";
+		// echo '<meta http-equiv="refresh" content="3 ;url=index.php#toregister"/>'
+	}
+	
+
+
 } else if ($act === 'login') {
 	# code...
 }
