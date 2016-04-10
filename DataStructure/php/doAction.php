@@ -1,4 +1,5 @@
 <?php 
+header('content-type:text/html; charset=utf-8');
 //1. 引入所需的文件
 require_once '../swiftmailer_lib/swift_required.php';
 require_once 'PdoMySQL.class.php';
@@ -84,6 +85,25 @@ EOF;
 
 } else if ($act === 'login') {
 	# code...
+} else if ($act === 'activation') {
+	# activation
+	$token = addslashes($_GET['token']);
+	$row = $PdoMySQL -> find($table,"token='{$token}' AND status=0",array('id','token_expire'));
+	$now = time();
+	if ($now > $row['token_expire']) {
+		echo "token_expire";
+	} else {
+		$res = $PdoMySQL -> update(array('status'=>1),$table,'id='.$row['id']);
+		if ($res) {
+			echo "register succeed, 3 seconds redirect to login page!<br/>";
+		    echo "<meta http-equiv='refresh' content='3 ;url=index.php#tologin'/>";
+		} else {
+			echo "register failure!: 3 seconds redirect to register page!";
+			echo "<meta http-equiv='refresh' content='3 ;url=index.php#toregister'/>";
+		}
+		
+	}
+	
 }
 
 
@@ -101,6 +121,7 @@ try{
 	       register_time VARCHAR(255) NOT NULL
 	       );
 EOF;
+    // $sql_create();
     $res = $pdo->exec($sql);
     var_dump($res);
     echo "exec() ? num : 0 ".$res."\n<br/>";
