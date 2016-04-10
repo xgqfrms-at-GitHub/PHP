@@ -1,12 +1,13 @@
 # PHP
-php for the testing!  
+php manuals for the newbie programmer!  
 
 ***
 ***
 
-### reference link  
+### references link :
 
-*   
-[http://www.w3school.com.cn/php/php_ref_mysql.asp](http://www.w3school.com.cn/php/php_ref_mysql.asp)
+* [PHP noob 教程:http://www.runoob.com/php/php-tutorial.html](http://www.runoob.com/php/php-tutorial.html)  
+
+* [PHP official 手册:http://php.net/manual/zh/](http://php.net/manual/zh/)
 
 
