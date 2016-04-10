@@ -46,8 +46,10 @@ echo  strlen($str_2);
 <?php
 //Example #1 strlen() 范例
 $str = 'abcdef';
+echo "\n<br/>{$str}:";
 echo strlen($str); // 6
 
 $str = ' ab cd ';
+echo "\n<br/>{$str}:(3 space)";
 echo strlen($str); // 7
 ?>
