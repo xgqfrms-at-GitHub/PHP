@@ -30,6 +30,7 @@ if ($act === 'reg') {
 		$transport = Swift_SmtpTransport::newInstance('smtp.qq.com',25);
 		//?  smtp-mail.outlook.com 587/25
 		# http://email.about.com/od/Outlook.com/f/What-Are-The-Outlook-com-Smtp-Server-Settings.htm
+		$transport -> setUsername();
 	} else {
 		echo "register failure!: 3 seconds redirect to register page!";
 		echo "<meta http-equiv='refresh' content='3 ;url=index.php#toregister'/>";
