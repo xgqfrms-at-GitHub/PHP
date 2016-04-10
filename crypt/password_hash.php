@@ -1,0 +1,5 @@
+<?php 
+//password_hash 
+
+
+ ?>
