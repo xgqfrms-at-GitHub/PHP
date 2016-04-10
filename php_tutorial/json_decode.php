@@ -31,6 +31,23 @@
  * 
  * 范例 :
  * 
+ * 注释 :
+ * Note:
+ * The JSON spec is not JavaScript, but a subset of JavaScript.
+ * Note:
+ * In the event of a failure to decode, json_last_error() can be used to determine the exact nature of the error.
+ * 
+ * 
+ * 更新日志 :
+ * 版本  说明
+ * 5.4.0 The options parameter was added.
+ * 5.3.0 Added the optional depth. The default recursion depth was increased from 128 to 512
+ * 5.2.3 The nesting limit was increased from 20 to 128
+ * 5.2.1 Added support for JSON decoding of basic types.
+ * 
+ * 参见:
+ * json_encode() - 对变量进行 JSON 编码
+ * json_last_error() - 返回最后发生的错误
  * 
  */
 
@@ -80,5 +97,102 @@ var_dump(json_decode($json, true));
   'e' => int 5 
  *
  */
+
+?>
+
+<?php
+//Example #2 Accessing invalid object properties
+
+$json = '{"foo-bar": 12345}';
+
+$obj = json_decode($json);
+print $obj->{'foo-bar'}; // 12345
+
+?>
+
+<?php
+//Example #3 common mistakes using json_decode()
+
+// the following strings are valid JavaScript but not valid JSON
+// the name and value must be enclosed in double quotes
+// single quotes are not valid 
+$bad_json = "{ 'bar': 'baz' }";
+json_decode($bad_json); // null
+
+// the name must be enclosed in double quotes
+$bad_json = '{ bar: "baz" }';
+json_decode($bad_json); // null
+
+// trailing commas are not allowed
+$bad_json = '{ bar: "baz", }';
+json_decode($bad_json); // null
+
+?>
+
+
+<?php
+
+// the following strings are valid JavaScript but not valid JSON
+
+// the name and value must be enclosed in double quotes
+// single quotes are not valid 
+$bad_json = "{ 'bar': 'baz' }";
+json_decode($bad_json); // null
+
+// the name must be enclosed in double quotes
+$bad_json = '{ bar: "baz" }';
+json_decode($bad_json); // null
+
+// trailing commas are not allowed
+$bad_json = '{ bar: "baz", }';
+json_decode($bad_json); // null
+
+?>
+
+
+<?php
+//Example #4 depth errors
+
+// Encode the data.
+$json = json_encode(
+    array(
+        1 => array(
+            'English' => array(
+                'One',
+                'January'
+            ),
+            'French' => array(
+                'Une',
+                'Janvier'
+            )
+        )
+    )
+);
+
+// Define the errors.
+$constants = get_defined_constants(true);
+$json_errors = array();
+foreach ($constants["json"] as $name => $value) {
+    if (!strncmp($name, "JSON_ERROR_", 11)) {
+        $json_errors[$value] = $name;
+    }
+}
+
+// Show the errors for different depths.
+foreach (range(4, 3, -1) as $depth) {
+    var_dump(json_decode($json, true, $depth));
+    echo 'Last error: ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
+}
+?>
+
+
+
+<?php
+//Example #5 json_decode() of large integers
+
+$json = '12345678901234567890';
+
+var_dump(json_decode($json));
+var_dump(json_decode($json, false, 512, JSON_BIGINT_AS_STRING));
 
 ?>

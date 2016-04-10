@@ -53,3 +53,21 @@ $str = ' ab cd ';
 echo "\n<br/>{$str}:(3 space)";
 echo strlen($str); // 7
 ?>
+
+
+
+<?php
+//Example #2 递归 count() 例子
+
+$food = array('fruits' => array('orange', 'banana', 'apple'),
+              'veggie' => array('carrot', 'collard', 'pea'));
+
+// recursive count
+echo "\n<br/>";
+echo count($food, COUNT_RECURSIVE); // output 8
+
+// normal count
+echo "\n<br/>";
+echo count($food); // output 2
+
+?>

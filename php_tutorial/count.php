@@ -1,6 +1,7 @@
 <?php 
 /**
  * http://php.net/manual/zh/function.count.php
+ * 
  * count
  * (PHP 4, PHP 5, PHP 7)
  * count — 计算数组中的单元数目或对象中的属性个数
@@ -24,8 +25,23 @@
  * 返回值 :
  * 返回 var 中的单元数目。 
  * 如果 var 不是数组类型或者实现了 Countable 接口的对象，将返回 1，有一个例外，如果 var 是 NULL 则结果是 0。
- * Caution : count() 对没有初始化的变量返回 0，但对于空的数组也会返回 0。用 isset() 来测试变量是否已经初始化。
+ * Caution : count() 对没有初始化的变量返回 0，但对于空的数组也会返回 0。
+ * 用 isset() 来测试变量是否已经初始化。
  * 
+ * 更新日志 :
+ * 版本	  说明
+ * 4.2.0  添加了可选的 mode 参数。
+ * 
+ * 
+ * 参见 :
+ * is_array() - 检测变量是否是数组
+ * http://php.net/manual/zh/function.is-array.php
+ * 
+ * isset() - 检测变量是否设置
+ * http://php.net/manual/zh/function.isset.php
+ * 
+ * strlen() - 获取字符串长度
+ * http://php.net/manual/zh/function.strlen.php
  */
 
 
@@ -43,18 +59,22 @@ $a[1] = 3;
 $a[2] = 5;
 $result = count($a);
 // $result == 3
+echo $result."<br/>";
 
 $b[0]  = 7;
 $b[5]  = 9;
 $b[10] = 11;
 $result = count($b);
 // $result == 3
+echo $result."<br/>";
 
 $result = count(null);
 // $result == 0
+echo $result."<br/>";
 
 $result = count(false);
 // $result == 1
+echo $result."<br/>";
 ?>
 
 
@@ -65,9 +85,10 @@ $food = array('fruits' => array('orange', 'banana', 'apple'),
               'veggie' => array('carrot', 'collard', 'pea'));
 
 // recursive count
-echo count($food, COUNT_RECURSIVE); // output 8 (2+6)
+echo count($food, COUNT_RECURSIVE)."<br/>"; // output 8 (2+6)
 
 // normal count
-echo count($food); // output 2
+echo count($food)."<br/>"; // output 2
+
 
 ?>
