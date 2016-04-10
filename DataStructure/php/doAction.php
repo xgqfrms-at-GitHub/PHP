@@ -11,7 +11,8 @@ $password = md5($_POST['password']);
 // $password = md5($_POST['password'], raw_output);
 
 /**/
-$sql = <<< EOF
+try{
+	$sql = <<< EOF
            CREATE TABLE IF NOT EXISTS pdo_users(
 	       id INT(32) UNSIGNED AUTO_INCREMENT KEY,
 	       username VARCHAR(255) NOT NULL UNIQUE,
@@ -23,5 +24,30 @@ $sql = <<< EOF
 	       register_time VARCHAR(255) NOT NULL
 	       );
 EOF;
+    $res = $pdo->exec($sql);
+    var_dump($res);
+    echo "exec() ? num : 0 ".$res."\n<br/>";
+    
+}catch (PDOException $e){
+	echo ($e->getMessage());
+}
 
+
+
+
+
+
+/**
+ * 
+ * SQL DEFAULT Constraint
+ * http://www.w3schools.com/sql/sql_default.asp
+ * 
+ * SQL 约束（Constraints）
+ * http://www.runoob.com/sql/sql-constraints.html
+ * 
+ * 13.1.18 CREATE TABLE Syntax
+ * http://dev.mysql.com/doc/refman/5.7/en/create-table.html
+ * 
+ * 
+ */
  ?>
