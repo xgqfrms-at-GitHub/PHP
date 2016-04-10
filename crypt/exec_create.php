@@ -19,13 +19,14 @@ try{
 	       password VARCHAR(255) NOT NULL,
 	       email VARCHAR(255) NOT NULL UNIQUE,
 	       token VARCHAR(255) NOT NULL UNIQUE,
-	       token_expire INT(32) NOT NULL,
+	       token_expire INT(32) NOT NULL DEFAULT '0',
 	       status tinyint(1) NOT NULL,
 	       register_time VARCHAR(255) NOT NULL
 	       );
 EOF;
 
     $res = $pdo->exec($sql);
+    //
     var_dump($res);
     echo "exec() ? num : 0 ".$res."\n<br/>";
 
