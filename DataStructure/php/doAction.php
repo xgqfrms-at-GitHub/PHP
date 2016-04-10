@@ -9,6 +9,15 @@ $act = $_GET['act'];
 $username = addslashes($_POST['username']);
 $password = md5($_POST['password']);
 // $password = md5($_POST['password'], raw_output);
+$email = $_POST['email'];
+if ($act === 'reg') {
+	# code...
+	//
+	/**/
+} else if ($act === 'login') {
+	# code...
+}
+
 
 /**/
 try{
@@ -27,7 +36,7 @@ EOF;
     $res = $pdo->exec($sql);
     var_dump($res);
     echo "exec() ? num : 0 ".$res."\n<br/>";
-    
+
 }catch (PDOException $e){
 	echo ($e->getMessage());
 }
