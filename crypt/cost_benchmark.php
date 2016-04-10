@@ -114,6 +114,47 @@ echo "Appropriate Cost Found: " . $cost . "\n";
  * 请注意，随时间推移，默认算法可能会有变化，
  * 所以需要储存的空间能够超过 60 字（255字不错）
  */
-echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT)."\n";
+echo "\n<br/>".password_hash("rasmuslerdorf", PASSWORD_DEFAULT)."\n<br/>";
+//$2y$10$   cost = 10
 ?>
 
+<?php
+//Example #2 password_hash() 手动设置 cost 的例子
+/**
+ * 在这个案例里，我们为 BCRYPT 增加 cost 到 12。
+ * 注意，我们已经切换到了，将始终产生 60 个字符。
+ */
+$options = [
+    'cost' => 12,
+];
+echo "\n<br/>".password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options)."\n<br/>";
+//$2y$12$   cost = 12
+$options = [
+    'cost' => 8,
+];
+echo "\n<br/>".password_hash("rasmuslerdorf", PASSWORD_BCRYPT, $options)."\n<br/>";
+//$2y$08$   cost = 08
+
+
+//http://php.net/manual/zh/function.strlen.php
+/**
+ *(PHP 4, PHP 5, PHP 7)
+ * strlen — 获取字符串长度
+ * 
+ * 
+ * 
+ */
+
+
+$str_l = '$2y$12$wMXyIUwD69GSypjhAQmOLeG5eB4jaKftJsyBvSdE6AoRrM4Mm.d9O';//单引号，正确
+$str_2 = "$2y$12$wMXyIUwD69GSypjhAQmOLeG5eB4jaKftJsyBvSdE6AoRrM4Mm.d9O";//双引号，错误
+echo "\n<br/>";
+echo "单引号，正确\n<br/>";
+echo  strlen($str_l);
+echo "\n<br/>";
+echo "双引号，错误\n<br/>";
+echo  strlen($str_2);
+
+
+
+?>
