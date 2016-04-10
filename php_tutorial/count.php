@@ -65,7 +65,7 @@ $food = array('fruits' => array('orange', 'banana', 'apple'),
               'veggie' => array('carrot', 'collard', 'pea'));
 
 // recursive count
-echo count($food, COUNT_RECURSIVE); // output 8
+echo count($food, COUNT_RECURSIVE); // output 8 (2+6)
 
 // normal count
 echo count($food); // output 2
