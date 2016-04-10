@@ -25,6 +25,8 @@ if ($act === 'reg') {
 	# status 0; 默认： 未激活
 	$data = compact('username','password','email','token','token_expire','register_time');
 	$res = $PdoMySQL -> add($data,$table);
+    // register failure, delete the register data!
+    $lastInsertId = $PdoMySQL -> getLastInsertID();
 	if ($res) {
 		# send email  QQ ?
 		$transport = Swift_SmtpTransport::newInstance('smtp.qq.com',25);
@@ -39,7 +41,39 @@ if ($act === 'reg') {
 		# $arrayName = array('' => , );
 		$message -> setFrom(array('admin@outlook.com' => 'admin'));
 		$message -> setTo(array($email => 'immoc'));
-		
+		$message -> setSubject('activate email');
+		$message -> setCharset('UTF-8');//?
+		# 修改 status；配置 host,ip,php 等资源；token 验证；
+		$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?act=active&token={$token}";
+		# url encode 
+		$urlencode = urlencode($url);
+		$str = <<< EOF
+		hello {$username},welcome to this website!<br/>
+		click the below link to activate your account!<br/>
+		<a href="{$url}">{$urlencode}</a><br/>
+		if click the link no reponse, please copy and paste it to the address bar of browser!<br/>
+		Note: the valid time of the link is in 24 hour!
+EOF;
+		$message -> setBody("{$str}",'text/html','utf-8');
+		# attachment 附件 ?
+		$attachment = Swift_Attachment::newInstance();
+		$attachment -> setBody();
+		$attachment -> setFilename();
+		try {
+			if ($mailer -> send($messagem)) {
+				echo "register succeed, 3 seconds redirect to login page!<br/>";
+				echo "{$username} congratulations! please goto your email-box{$email} and activate your account!<br/>";
+				echo "<meta http-equiv='refresh' content='3 ;url=index.php#tologin'/>";
+			} else {
+				$PdoMySQL -> delete($table,'id='.$lastInsertId);
+				echo "register failure, 3 seconds redirect to register page!<br/>";
+				echo "{$username} sorry! please re-registration!<br/>";
+				echo "<meta http-equiv='refresh' content='3 ;url=index.php#toregister'/>";
+			}
+			
+		} catch (Swift_ConnectionException $e) {
+			echo "Exception Error :".$e->getMessage();
+		}
 	} else {
 		echo "register failure!: 3 seconds redirect to register page!";
 		echo "<meta http-equiv='refresh' content='3 ;url=index.php#toregister'/>";
