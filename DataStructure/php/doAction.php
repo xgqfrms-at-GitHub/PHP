@@ -84,7 +84,16 @@ EOF;
 
 
 } else if ($act === 'login') {
-	# code...
+	//PHP-密码salt http://www.imooc.com/wiki/detail/id/615
+	//PHP cURL 函数 http://www.imooc.com/wiki/detail/id/3329
+	$row=$PdoMySQL->find($table,"username='{$username}' AND password='{$password}'",'status');
+	if ($row['status']==0){
+		echo '请先激活在登陆';
+		echo '<meta http-equiv="refresh" content="3;url=index.php#tologin"/>';
+	} else {
+		echo '登陆成功,3秒钟后跳转到首页';
+		echo '<meta http-equiv="refresh" content="3;url=index.php#tologin"/>';
+	}
 } else if ($act === 'activation') {
 	# activation
 	$token = addslashes($_GET['token']);
