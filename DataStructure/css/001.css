@@ -5,7 +5,7 @@
 body{
 	margin:0;
 	padding:0;
-	background-color: #000000;
+	/*background-color: #000000;*/
 	font-size: 16px;
 	color: #ffffff;
 }
@@ -29,36 +29,12 @@ body{
     position: fixed;
     bottom: 0;
 }
-
-.d_header img {
-	width: 62px;
-	height: 62px;
-	border-radius: 31px;
-	border: 1px solid #ff0000;
-	overflow: hidden;
-}
-.d_header span{
-	color: #FF00FF;
-	padding-left: 12%;
-	font-size: 3rem;
-}
 #c_container{
+	/*position: fixed;*/
 	width: 100%;
 	height: 80%;
-	padding-top: -100px;
-	margin: 0;
-	border: 3px solid red;
-	background-color: #abcdef;
-}
-p{
-    background: #ffffff;
-    font-size: 16px;
-    color: #0f0f0f;
-    padding:10px 10% ;
-
-}
-p::selection{
-    background: #ff00ff;
-    font-size: 32px;
-    color: #00ff0f;
+	padding: 0;
+	margin-top:5%;
+	border: 1px solid red;
+	background-color: #abcedf;
 }
