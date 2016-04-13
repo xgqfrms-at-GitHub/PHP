@@ -1,5 +1,5 @@
 <?php 
-$e_pwd = "*********";
-$e_name = "xxxxxxxxx";
+$e_name = "anonymous-ufo";
+$e_pwd = "hacker@ufo";
 
 ?>

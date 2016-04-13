@@ -4,25 +4,18 @@
 try{
 	// $pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '123456', options)
 	$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '123456');
-// 	$sql = <<< EOF
-// 	       CREATE TABLE IF NOT EXISTS users(
-// 	       id INT UNSIGNED AUTO_INCREMENT KEY,
-// 	       username VARCHAR(20) NOT NULL UNIQUE,
-// 	       password CHAR(32) NOT NULL,
-// 	       email VARCHAR(32) NOT NULL
-// 	       );
-// EOF;
+
 	$sql = <<< EOF
-           CREATE TABLE IF NOT EXISTS pdo_users(
-	       id INT(32) UNSIGNED AUTO_INCREMENT KEY,
-	       username VARCHAR(255) NOT NULL UNIQUE,
-	       password VARCHAR(255) NOT NULL,
-	       email VARCHAR(255) NOT NULL UNIQUE,
-	       token VARCHAR(255) NOT NULL UNIQUE,
-	       token_expire INT(32) NOT NULL DEFAULT '0',
-	       status tinyint(1) NOT NULL,
-	       register_time VARCHAR(255) NOT NULL
-	       );
+           CREATE TABLE IF NOT EXISTS users( 
+		       id INT(32) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+		       username VARCHAR(255) NOT NULL UNIQUE COMMENT '用户名', 
+		       password VARCHAR(255) NOT NULL COMMENT'密码',
+		       email VARCHAR(255) NOT NULL UNIQUE COMMENT '邮箱',
+		       token VARCHAR(255) NOT NULL UNIQUE COMMENT '帐号激活码',
+		       token_expire INT(32) NOT NULL COMMENT '激活码有效期',
+		       status TINYINT(1) NOT NULL DEFAULT '0' COMMENT '状态,0-未激活,1-已激活',
+		       register_time  VARCHAR(255) NOT NULL COMMENT '注册时间'
+           )ENGINE=INNODB  DEFAULT CHARSET=utf8; 
 EOF;
 
     $res = $pdo->exec($sql);

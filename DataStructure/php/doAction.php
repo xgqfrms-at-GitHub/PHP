@@ -25,12 +25,16 @@ if ($act === 'reg') {
 	$token_expire = $register_time+24*3600;
 	# status 0; 默认： 未激活
 	$data = compact('username','password','email','token','token_expire','register_time');
+
+	// Fatal error: Call to a member function add() on a non-object in  ????
 	$res = $PdoMySQL -> add($data,$table);
     // register failure, delete the register data!
     $lastInsertId = $PdoMySQL -> getLastInsertID();
 	if ($res) {
 		# send email  QQ ?
-		$transport = Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		// $transport = Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		$transport = Swift_SmtpTransport::newInstance('smtp-mail.outlook.com',25);
+		$transport = Swift_SmtpTransport::newInstance('smtp-mail.outlook.com',587);
 		//?  smtp-mail.outlook.com 587/25
 		# http://email.about.com/od/Outlook.com/f/What-Are-The-Outlook-com-Smtp-Server-Settings.htm
 		$transport -> setUsername($e_name);
@@ -40,8 +44,8 @@ if ($act === 'reg') {
 		# message
 		$message = Swift_Message::newInstance();
 		# $arrayName = array('' => , );
-		$message -> setFrom(array('admin@outlook.com' => 'admin'));
-		$message -> setTo(array($email => 'immoc'));
+		$message -> setFrom(array('anonymous-ufo@outlook.com' => 'anonymous-ufo'));
+		$message -> setTo(array($email => 'DSQC_xgqfrms'));
 		$message -> setSubject('activate email');
 		$message -> setCharset('UTF-8');//?
 		# 修改 status；配置 host,ip,php 等资源；token 验证；
@@ -116,16 +120,16 @@ EOF;
 }
 
 
-/**/
+/*
 try{
 	$sql = <<< EOF
-           CREATE TABLE IF NOT EXISTS pdo_users(
+           CREATE TABLE IF NOT EXISTS users(
 	       id INT(32) UNSIGNED AUTO_INCREMENT KEY,
 	       username VARCHAR(255) NOT NULL UNIQUE,
 	       password VARCHAR(255) NOT NULL,
 	       email VARCHAR(255) NOT NULL UNIQUE,
 	       token VARCHAR(255) NOT NULL UNIQUE,
-	       token_expire INT(32) NOT NULL DEFAULT(0),
+	       token_expire INT(32) NOT NULL DEFAULT '0',
 	       status tinyint(1) NOT NULL,
 	       register_time VARCHAR(255) NOT NULL
 	       );
@@ -138,7 +142,7 @@ EOF;
 }catch (PDOException $e){
 	echo ($e->getMessage());
 }
-
+*/
 
 
 
