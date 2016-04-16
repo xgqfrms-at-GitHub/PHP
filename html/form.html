@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form for POST & GET</title>
+	<meta name="keyword" content="http://www.diffen.com/difference/GET_(HTTP)_vs_POST_(HTTP)">
+	<meta name="reference" content="http://www.runoob.com/w3cnote/meta.html">
+</head>
+<body>
+    <h2>POST </h2>
+	<!-- <form action="form1.php" method="POST" target="_blank" > -->
+	<form action="form.php" method="post" target="_blank" >
+	    <label for="">username</label>
+		<input type="text" name="username" placeholder="username" /><br/>
+		<label for="">password</label>
+		<input type="password" name="password" placeholder="password" /><br/>
+		<label for="">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="reset" value="reset">
+		<span>&nbsp;&nbsp;</span>
+		<input type="submit" value="submit">
+	</form>
+	<hr/>
+	<h2>GET </h2>
+	<form action="form.php" method="GET" target="_blank">
+	<!-- <form action="xx.xxx" method="get" target="_blank"> -->
+	    <label for="">username</label>
+		<input type="text" name="username" placeholder="username" /><br/>
+		<label for="">password</label>
+		<input type="password" name="password" placeholder="password" /><br/>
+		<label for="">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="reset" value="reset">
+		<span>&nbsp;&nbsp;</span>
+		<input type="submit" value="submit">
+	</form>
+	<hr/>
+	<!-- error : input without name 属性-->
+<!-- 	<h2>POST </h2>
+	<form action="form.php" method="post" target="_blank" >
+	    <label for="">username</label>
+		<input type="text" placeholder="username" /><br/>
+		<label for="">password</label>
+		<input type="password" placeholder="password" /><br/>
+		<label for="">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="reset" value="reset">
+		<span>&nbsp;&nbsp;</span>
+		<input type="submit" value="submit">
+	</form>
+	<hr/>
+	<h2>GET </h2>
+	<form action="form.php" method="GET" target="_blank">
+	    <label for="">username</label>
+		<input type="text" placeholder="username" /><br/>
+		<label for="">password</label>
+		<input type="password" placeholder="password" /><br/>
+		<label for="">&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="reset" value="reset">
+		<span>&nbsp;&nbsp;</span>
+		<input type="submit" value="submit">
+	</form> -->
+</body>
+</html>
+
+<!-- 
+ method 不区分大小写！
+
+ method="get"  method="post" 正确！
+
+ method="POST" method="GET"  正确！
+
+ -->
+
+
+<!-- 
+
+post get error！
+
+input name 属性 不可以少！
+
+ -->
