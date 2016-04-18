@@ -1,5 +1,6 @@
 <?php
-http://www.imooc.com/code/2913
+// http://www.imooc.com/code/2913
+header("Content-type:text/html;charset=utf-8");
 
 $dsn = 'mysql:dbname=code1;host=127.0.0.1';
 $user = 'code1';
