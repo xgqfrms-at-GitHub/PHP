@@ -45,7 +45,7 @@ class NBAPlayer{
     	$this->player_num = $player_num;
     }
     # destruct will be auto call when object instance execute over
-    # destruct using to clear the rubbish!
+    # destruct using to release the resource!
 
     //public methods
     public function run(){
