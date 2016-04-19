@@ -19,7 +19,8 @@ class NBAPlayer{
     //construct method
     function __construct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
-    	print_r(var, return)
+    	$return = "return";
+    	print_r($var, $return)
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -33,7 +34,8 @@ class NBAPlayer{
     // function __destruct(){
     function __destruct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
-    	print_r(var, return)
+    	$return = "return";
+    	print_r($var, $return)
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -41,7 +43,8 @@ class NBAPlayer{
     	$this->team = $team;
     	$this->player_num = $player_num;
     }
-    # construct will be auto call when object instance 
+    # destruct will be auto call when object instance execute over ?
+    # destruct using to clear the rubbish!
 
     //public methods
     public function run(){
