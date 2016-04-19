@@ -44,7 +44,7 @@ class NBAPlayer{
     	$this->team = $team;
     	$this->player_num = $player_num;
     }
-    # destruct will be auto call when object instance execute over ?
+    # destruct will be auto call when object instance execute over
     # destruct using to clear the rubbish!
 
     //public methods
