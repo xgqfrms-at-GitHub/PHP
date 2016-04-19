@@ -1,6 +1,16 @@
 <?php 
+date_default_timezone_set("PRC");
+#
+//super class 
+class Human{
+	//public attributes
+	public $name;
+	public $height;
+	public $weight;
+}
+
 //class
-class NBAPlayer{
+class NBAPlayer extends Human{
 	//public attributes
 	public $name;
 	public $height;
