@@ -20,7 +20,7 @@ class NBAPlayer{
     function __construct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
     	$return = "return";
-    	print_r($var, $return)
+    	print_r($var, $return);
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -31,11 +31,12 @@ class NBAPlayer{
     # construct will be auto call when object instance 
 
     //destruct method
-    // function __destruct(){
-    function __destruct($name,$height,$weight,$team,$player_num){
+    #Fatal error: Destructor NBAPlayer::__destruct() cannot take arguments
+    function __destruct(){
+    // function __destruct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
     	$return = "return";
-    	print_r($var, $return)
+    	print_r($var, $return);
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -48,16 +49,19 @@ class NBAPlayer{
 
     //public methods
     public function run(){
-    	echo "Running\n";
+    	// echo "Running\n"; # \n 仅在cmd中好使！
+    	echo "Running<br/>"; # <br/> 在Browser中好使！
+    	//echo "Running&lt;br/&gt;"; 
+    	# &lt;br/&gt; 在Browser中好使,显示为<br/> ！
     }
     public function jump(){
-    	echo "Jumping\n";
+    	echo "Jumping<br/>";
     }
     public function dribble(){
-    	echo "Dribbling\n";
+    	echo "Dribbling<br/>";
     }
     public function slam_dunk(){
-    	echo "Slam dunk\n";
+    	echo "Slam dunk<br/>";
     }
 
     //private methods
@@ -67,7 +71,7 @@ class NBAPlayer{
     }
 }
 
-$jordan = new NBAPlayer("Jordan","1.98m","98kg","Bull","23");
+$jordan = new NBAPlayer("Jordan@2016","1.98m","98kg","Bull","23");
 #实例化，构造方法(参数list)！
 $jordan->run();
 $jordan->jump();
@@ -75,7 +79,7 @@ $jordan->dribble();
 $jordan->slam_dunk();
 #
 $var_name = $jordan->name;
-echo "name:{$var_name}\n";
+echo "name:{$var_name}<br/>";
 
 // 显式： $jordan = null ; # 直接调用 析构函数；
 // 隐式： //$jordan = null ; # 在函数执行结束时，自动调用 析构函数；
