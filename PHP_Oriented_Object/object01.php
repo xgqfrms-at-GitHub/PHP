@@ -26,11 +26,21 @@ class NBAPlayer extends Human{
     protected $health;
     protected $secret;
 
+    //static attributes
+    public static $prisident;
+
+    //static method
+    public static function changePrisident($new_prisident){
+    	self::$prisident = $new_prisident;
+    	# 操作符号 :: 
+    }
+
     //construct method
     function __construct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
     	$return = "return";
     	print_r($var, $return);
+    	echo "__construct<br/>";
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -41,12 +51,13 @@ class NBAPlayer extends Human{
     # construct will be auto call when object instance 
 
     //destruct method
+    // function __destruct($name,$height,$weight,$team,$player_num){
     #Fatal error: Destructor NBAPlayer::__destruct() cannot take arguments
     function __destruct(){
-    // function __destruct($name,$height,$weight,$team,$player_num){
     	$var = "100 Million";
     	$return = "return";
     	print_r($var, $return);
+    	echo "__destruct<br/>";
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -60,7 +71,8 @@ class NBAPlayer extends Human{
     //public methods
     public function run(){
     	// echo "Running\n"; # \n 仅在cmd中好使！
-    	echo "Running<br/>"; # <br/> 在Browser中好使！
+    	// echo "Running<br/>"; # <br/> 在Browser中好使！
+    	echo "Running\n<br/>"; # \n<br/> 在cmd,在Browser中都好使！
     	//echo "Running&lt;br/&gt;"; 
     	# &lt;br/&gt; 在Browser中好使,显示为<br/> ！
     }
