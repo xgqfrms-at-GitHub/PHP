@@ -7,6 +7,16 @@ class Human{
 	public $name;
 	public $height;
 	public $weight;
+
+	//static attributes
+    public static $Super_prisident = "Administrator";
+    # using to share the public data
+
+    //static method
+    public static function changeSPrisident($new_Sprisident){
+    	self::$Super_prisident = $new_Sprisident;
+    	# 操作符号 :: 
+    }
 }
 
 //class
@@ -27,12 +37,17 @@ class NBAPlayer extends Human{
     protected $secret;
 
     //static attributes
-    public static $prisident;
+    public static $prisident = "Root";
+    # using to share the public data
 
     //static method
     public static function changePrisident($new_prisident){
     	self::$prisident = $new_prisident;
-    	# 操作符号 :: 
+    	# 操作符号 self:: 
+    	# visit the itself class static member/attribute 
+    	parent::$Super_prisident = $new_prisident;
+    	# 操作符号 parent::
+    	# visit the parent class static member/attribute 
     }
 
     //construct method
@@ -40,7 +55,7 @@ class NBAPlayer extends Human{
     	$var = "100 Million";
     	$return = "return";
     	print_r($var, $return);
-    	echo "__construct<br/>";
+    	echo "<br/>__construct<br/>";
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -57,7 +72,7 @@ class NBAPlayer extends Human{
     	$var = "100 Million";
     	$return = "return";
     	print_r($var, $return);
-    	echo "__destruct<br/>";
+    	echo "<br/>__destruct<br/>";
     	# this 伪变量，对象自身
     	$this->name = $name;
     	$this->height = $height;
@@ -106,5 +121,9 @@ echo "name:{$var_name}<br/>";
 // 显式： $jordan = null ; # 直接调用 析构函数；
 // 隐式： //$jordan = null ; # 在函数执行结束时，自动调用 析构函数；
 
+echo "\n<br/>".NBAPlayer::$prisident;
+NBAPlayer::changePrisident("xgqfrms");
+echo "\n<br/>".NBAPlayer::$prisident;
+echo "\n<br/>".Human::$Super_prisident;
 
  ?>
