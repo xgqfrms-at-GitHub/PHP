@@ -14,7 +14,7 @@
         <meta name="author" content="Codrops" />
         
         <!-- PHP 不支持 jpg! -->
-        <link rel="shortcut icon" href="images/favicon_henau"  type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon_henau.png"  type="image/x-icon">
        
         <!-- <link rel="shortcut icon" href="images/favicon.png"  type="image/x-icon">  -->
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
