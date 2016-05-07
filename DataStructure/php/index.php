@@ -14,7 +14,7 @@
         <meta name="author" content="Codrops" />
         
         <!-- PHP 不支持 jpg! -->
-        <link rel="shortcut icon" href="images/favicon_henau.png"  type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon.png"  type="image/x-icon">
        
         <!-- <link rel="shortcut icon" href="images/favicon.png"  type="image/x-icon">  -->
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -26,7 +26,10 @@
             <header>
                 <h1>DSQC<span>|Data Structure Quality Course</span></h1>
 				<nav class="codrops-demos">
-					<span>点击<strong>"加入我们"</strong>注册DSQC账号</span>
+					<!-- <span>点击<strong>"加入我们"</strong>注册DSQC账号</span> -->
+                    <div class="logo">
+                        <img src="images/favicon.png">
+                    </div>
 				</nav>
             </header>
             <section>				
@@ -53,8 +56,8 @@
                                     <input type="submit" value="登陆" /> 
 								</p>
                                 <p class="change_link">
-									还不是会员?
-									<a href="#toregister" class="to_register">加入我们</a>
+									没有账号?
+									<a href="#toregister" class="to_register">注册账号</a>
 								</p>
                             </form>
                         </div>
@@ -78,8 +81,8 @@
 									<input type="submit" value="注册"/> 
 								</p>
                                 <p class="change_link">  
-									已经是会员?
-									<a href="#tologin" class="to_register">转到登陆</a>
+									已有账号?
+									<a href="#tologin" class="to_register">登陆账号</a>
 								</p>
                             </form>
                         </div>
