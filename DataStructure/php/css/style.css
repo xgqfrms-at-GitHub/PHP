@@ -381,3 +381,12 @@ p.change_link{
 	height: 90px;
 	background: transparent;
 }
+/* new css adding*/
+.codrops-demos .logo{
+	width: 100%;
+	height: 100%;
+}
+.codrops-demos .logo img{
+	width: 60%;
+	height: 15%;
+}
