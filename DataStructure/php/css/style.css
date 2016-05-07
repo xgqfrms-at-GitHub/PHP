@@ -154,7 +154,8 @@ input {
 #wrapper p.button input{
 	width: 30%;
 	cursor: pointer;	
-	background: rgb(61, 157, 179);
+	background: #13B305;
+	/*#13B305*/
 	padding: 8px 5px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
 	color: #fff;
@@ -180,7 +181,9 @@ input {
 	        transition: all 0.2s linear;
 }
 #wrapper p.button input:hover{
-	background: rgb(74, 179, 198);
+	background: rgb(0, 255, 0);
+	/*background: rgb(74, 179, 198);*/
+	/*rgb(61, 157, 179); */
 }
 #wrapper p.button input:active,
 #wrapper p.button input:focus{
@@ -261,6 +264,7 @@ p.change_link{
 	rgb(225, 234, 235) 30px, 
 	rgb(247, 247, 247) 30px
 	);
+	/*repeating-linear-gradient 线性渐变 background*/
 }
 #wrapper p.change_link a {
 	display: inline-block;
