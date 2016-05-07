@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiples</title>
+	<script>
+		function sum(){
+			//Multiples of 3 and 5?
+			var a=3,b=5,sum=0;
+			/*
+			var a=3;
+			var b=5;
+			var sum=0;
+			*/
+			for (var i=3; i<1000;i++){
+			if((i%3==0) || (i%5==0)){
+			    sum+=i;
+			   }
+			}
+			//sum
+			alert("SUM="+sum);
+			//var div = document.getElementById("div");
+			//div.innerHTML(sum);
+		}
+	</script>
+</head>
+<body>
+	<div class="div" id="div">
+		<label for="msg">SUM</label>
+		<input type="button" value="button" onclick="sum()">
+	</div>
+</body>
+</html>

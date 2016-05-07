@@ -1,0 +1,21 @@
+body{
+width:1024px;
+height:768px;
+padding: 0;
+background: grey;
+}
+
+.fcontainer{
+position: absolute;
+width:800px;
+height:400px;
+left:15%;
+top:100px;
+background:#cccccc;
+}
+.footer{
+position:absolute;
+bottom:30px;
+left:50%;
+color:green;
+}

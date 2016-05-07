@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+ <meta charset="utf-8" /> 
+ <title>无标题文档</title> 
+ <script > 
+  function refresh_code() 
+  { 
+   form1.imgcode.src="verifycode.php?a="+Math.random(); 
+  } 
+ </script> 
+ </head> 
+ <body> 
+ <form id="form1" name="form1" method="post" action="checkcode.php"> 
+   <label for="code">验证码：</label> 
+   <input type="text" name="code" id="textfield" /> 
+   <img id="imgcode" src="VerifyCode.php" alt="验证码" /> 
+   <a href="javascript:refresh_code()">看不清？换一个</a> 
+   <input type="submit" name="button" id="button" value="提交" /> 
+ </form> 
+ </body> 
+ </html>
