@@ -18,14 +18,16 @@
     <!-- Browser Compatiable -->
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
     <!--media query-->
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/> 
     <title>DSQC| XGQFRMS</title>
     
     <!-- PHP 不支持 favicon.png/jpg! error bug!-->
     <link rel="shortcut icon" href="images/favicon.png"  type="image/x-icon">
-   <!-- css -->
+    <!-- php server faviocn_xxx 加密error！ -->
+
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
