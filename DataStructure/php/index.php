@@ -33,7 +33,7 @@
                             <img src="images/favicon.jpg">
                             <img src="images/favicon.jpg">
                          -->
-                        <img src="images/favicon_henau.png">                        
+                        <img src="images/banner.jpg">                        
                     </div>
 				</nav>
             </header>
