@@ -28,7 +28,12 @@
 				<nav class="codrops-demos">
 					<!-- <span>点击<strong>"加入我们"</strong>注册DSQC账号</span> -->
                     <div class="logo">
-                        <img src="images/favicon.png">
+                        <!-- favicon 命名error: favicon.xxx 无法显示 ? -->
+                        <!-- 
+                            <img src="images/favicon.jpg">
+                            <img src="images/favicon.jpg">
+                         -->
+                        <img src="images/favicon_henau.png">                        
                     </div>
 				</nav>
             </header>
