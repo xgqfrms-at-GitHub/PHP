@@ -24,9 +24,9 @@
     <body>
         <div class="container">
             <header>
-                <h1>It's IMOOC<span>This Is King Show Time</span></h1>
+                <h1>DSQC<span>|Data Structure Quality Course</span></h1>
 				<nav class="codrops-demos">
-					<span>Click <strong>"Join us"</strong> to Register the Imooc</span>
+					<span>点击<strong>"加入我们"</strong>注册DSQC账号</span>
 				</nav>
             </header>
             <section>				
@@ -36,50 +36,50 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="doAction.php?act=login" autocomplete="on" method="post"> 
-                                <h1>Log in</h1> 
+                                <h1>登陆账号</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your username </label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="My Username"/>
+                                    <input id="username" name="username" required="required" type="text" placeholder="xgqfrms"/>
                                 </p>
                                 <p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="*****" /> 
+                                    <input id="password" name="password" required="required" type="password" placeholder="************" /> 
                                 </p>
                                 <p class="keeplogin"> 
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
+									<label for="loginkeeping">保持登陆状态</label>
 								</p>
                                 <p class="login button"> 
-                                    <input type="submit" value="Login" /> 
+                                    <input type="submit" value="登陆" /> 
 								</p>
                                 <p class="change_link">
-									Not a member yet ?
-									<a href="#toregister" class="to_register">Join us</a>
+									还不是会员?
+									<a href="#toregister" class="to_register">加入我们</a>
 								</p>
                             </form>
                         </div>
 
                         <div id="register" class="animate form">
                             <form  action="doAction.php?act=reg" autocomplete="on" method="post"> 
-                                <h1> Sign up </h1> 
+                                <h1>注册账号</h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesignup" name="username" required="required" type="text" placeholder="Mr.King" />
+                                    <input id="usernamesignup" name="username" required="required" type="text" placeholder="xgqfrms" />
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="Mr.King@mail.com"/> 
+                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="xgqfrms@gmail.com"/> 
                                 </p>
                                 <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsignup" name="password" required="required" type="password" placeholder="******"/>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password</label>
+                                    <input id="passwordsignup" name="password" required="required" type="password" placeholder="************"/>
                                 </p>
                                 <p class="signin button"> 
-									<input type="submit" value="Sign up"/> 
+									<input type="submit" value="注册"/> 
 								</p>
                                 <p class="change_link">  
-									Already a member ?
-									<a href="#tologin" class="to_register"> Go and log in </a>
+									已经是会员?
+									<a href="#tologin" class="to_register">转到登陆</a>
 								</p>
                             </form>
                         </div>
