@@ -65,6 +65,9 @@
                                 <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                                 <input id="password" name="password" required="required" type="password" placeholder="************" /> 
                             </p>
+                            <div class="captcha">
+                                <img src="captcha.php?var"><span>看不清，点击刷新！</span>
+                            </div>
                             <p class="keeplogin"> 
 								<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 								<label for="loginkeeping">保持登陆状态</label>
