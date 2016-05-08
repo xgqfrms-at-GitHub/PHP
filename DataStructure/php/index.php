@@ -37,16 +37,8 @@
         <header>
             <h1>DSQC<span>|Data Structure Quality Course</span></h1>
 			<nav class="codrops-demos">
-				<!-- <span>点击<strong>"加入我们"</strong>注册DSQC账号</span> -->
-                <div class="logo">
-                    <!-- favicon 命名error: favicon.xxx 无法显示 ? -->
-                    <!-- 
-                        <img src="images/favicon.jpg">
-                        <img src="images/favicon.jpg">
-                     -->
-                     <!--  -->
-                    <img src="images/banner.jpg">                       
-                </div>
+				<span><strong>DSQC | 数据结构核心课程网站</strong></span>
+                <!-- <div class="logo" title="banner">&nbsp;</div> -->
 			</nav>
         </header>
         <section>				
@@ -64,10 +56,10 @@
                             <p> 
                                 <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                                 <input id="password" name="password" required="required" type="password" placeholder="************" /> 
-                            </p>
+                            </p>                        
                             <p>
                                 <label for="captcha" class="youcaptcha" data-icon="p"> Your captcha </label>
-                                <input id="captcha" name="captcha" required="required" type="captcha" placeholder="captcha" /> 
+                                <input id="captcha" name="captcha" required="required" type="text" placeholder="captcha" /> 
                                 <div class="captcha">
                                     <img src="captcha.php?var">
                                     <span><a href="#">看不清，点击刷新!</a></span><br>
@@ -101,6 +93,10 @@
                             <p> 
                                 <label for="passwordsignup" class="youpasswd" data-icon="p">Your password</label>
                                 <input id="passwordsignup" name="password" required="required" type="password" placeholder="************"/>
+                            </p>
+                            <p> 
+                                <label for="repassword" class="reyoupasswd" data-icon="p"> Your repassword </label>
+                                <input id="repassword" name="repassword" required="required" type="password" placeholder="************" /> 
                             </p>
                             <p class="signin button"> 
 								<input type="submit" value="注册"/> 
