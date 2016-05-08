@@ -3,19 +3,26 @@
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
     <head>
-        <meta charset="UTF-8" />
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login and Registration Form with HTML5 and CSS3</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
-        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+        <meta charset="UTF-8">
+        <!-- SEO : Search Engine Optimization  -->
+        <meta name="keywords" content="DSQCW,Data Structure Quality Course Website">
+        <meta name="description" content="DSQCW:Data Structure Quality Course Website. It is a free Website for anybody who wants to learn Data Structure!">
+        <meta name="author" content="xgqfrms 2016">
+        <meta name="generator" content="Sublime Text3 && WAMP || LAMP">
+        <!-- 自动刷新 $ 重定向 --> 
+        <meta http-equiv="refresh" content="60; url=https://xgqfrms.github.io/DataStructure/">
+        <!-- Browser Compatiable -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+        <!--media query-->
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" media="screen"/>
+        <!-- icon -->
+        <link rel="shortcut icon" href="../../images/DataStructure.io.png" type="image/x-icon">
+        <title>DSQCW | Data Structure Quality Course</title>
     </head>
     <body>
         <div class="container">

@@ -2,6 +2,8 @@
 header('content-type:text/html;charset=utf-8');
 //1.包含所需文件
 require_once 'swiftmailer-master/lib/swift_required.php';
+
+// 官方文档：http://swiftmailer.org/docs/including-the-files.html
 require_once 'PdoMySQL.class.php';
 require_once 'config.php';
 require_once 'pwd.php';
@@ -87,7 +89,7 @@ EOF;
 		echo '<meta http-equiv="refresh" content="3;url=index.php#tologin"/>';
 	}else{
 		echo '登陆成功,3秒钟后跳转到首页';
-		echo '<meta http-equiv="refresh" content="3;url=http://www.imooc.com"/>';
+		echo '<meta http-equiv="refresh" content="3;url=https://xgqfrms.github.io/DataStructure"/>';
 	}
 	
 }elseif($act==='active'){
