@@ -25,7 +25,8 @@ if($act==='reg'){
 		//发送邮件，以QQ邮箱为例
 		# https://kf.qq.com/faq/120322fu63YV130422nqIrqu.html
 		//配置邮件服务器，得到传输对象
-		$transport=Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		// $transport=Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		$transport=Swift_SmtpTransport::newInstance('smtp.163.com',25);
 		# password: ednjcelcohgpdicj
 		# password: ceifkvsjjbwhebic
 		# password: sfbqmaowsokrdjbd
@@ -38,14 +39,14 @@ if($act==='reg'){
 		# delete from user where username='xgqfrms'
 		
 		//设置登陆帐号和密码
-		$transport->setUsername('2636605862@qq.com');
+		$transport->setUsername('xgqfrms@163.com');
 		$transport->setPassword($emailPassword);
 		//得到发送邮件对象Swift_Mailer对象
 		$mailer=Swift_Mailer::newInstance($transport);
 		//得到邮件信息对象
 		$message=Swift_Message::newInstance();
 		//设置管理员的信息
-		$message->setFrom(array('2636605862@qq.com'=>'Elite'));
+		$message->setFrom(array('xgqfrms@163.com'=>'xgqfrms'));
 		//将邮件发给谁
 		$message->setTo(array($email=>'DSQC'));
 		//设置邮件主题
