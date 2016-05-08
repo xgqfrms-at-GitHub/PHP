@@ -6,3 +6,4 @@ define('DB_NAME','test');
 define('DB_PORT','3306');
 define('DB_TYPE','mysql');
 define('DB_CHARSET','utf8');
+?>

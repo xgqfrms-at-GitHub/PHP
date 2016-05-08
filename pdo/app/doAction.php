@@ -23,19 +23,29 @@ if($act==='reg'){
 	$lastInsertId=$PdoMySQL->getLastInsertId();
 	if($res){
 		//发送邮件，以QQ邮箱为例
+		# https://kf.qq.com/faq/120322fu63YV130422nqIrqu.html
 		//配置邮件服务器，得到传输对象
 		$transport=Swift_SmtpTransport::newInstance('smtp.qq.com',25);
+		# password: ednjcelcohgpdicj
+		# password: ceifkvsjjbwhebic
+		# password: sfbqmaowsokrdjbd
+
+		# transport = Swift_SmtpTransport::newInstance('smtp-mail.outlook.com',25);
+		# $transport = Swift_SmtpTransport::newInstance('smtp-mail.outlook.com',587);
+		# smtp-mail.outlook.com 587/25
+		// http://email.about.com/od/Outlook.com/f/What-Are-The-Outlook-com-Smtp-Server-Settings.htm
+		
 		//设置登陆帐号和密码
-		$transport->setUsername('490222113@qq.com');
+		$transport->setUsername('2636605862@qq.com');
 		$transport->setPassword($emailPassword);
 		//得到发送邮件对象Swift_Mailer对象
 		$mailer=Swift_Mailer::newInstance($transport);
 		//得到邮件信息对象
 		$message=Swift_Message::newInstance();
 		//设置管理员的信息
-		$message->setFrom(array('490222113@qq.com'=>'King'));
+		$message->setFrom(array('2636605862@qq.com'=>'Elite'));
 		//将邮件发给谁
-		$message->setTo(array($email=>'imooc'));
+		$message->setTo(array($email=>'DSQC'));
 		//设置邮件主题
 		$message->setSubject('激活邮件');
 		$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?act=active&token={$token}";
@@ -95,3 +105,4 @@ EOF;
 	}
 	
 }
+?>

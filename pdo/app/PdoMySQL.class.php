@@ -452,6 +452,4 @@ $tables='user';
 //var_dump($PdoMySQL->delete($tables,'id>3','id DESC','5'));
 //print_r($PdoMySQL->showTables());
 
-
-
-
+?>
