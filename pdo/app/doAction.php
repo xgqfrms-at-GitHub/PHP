@@ -34,6 +34,8 @@ if($act==='reg'){
 		# $transport = Swift_SmtpTransport::newInstance('smtp-mail.outlook.com',587);
 		# smtp-mail.outlook.com 587/25
 		// http://email.about.com/od/Outlook.com/f/What-Are-The-Outlook-com-Smtp-Server-Settings.htm
+		# delete from 表名 where 表达式
+		# delete from user where username='xgqfrms'
 		
 		//设置登陆帐号和密码
 		$transport->setUsername('2636605862@qq.com');
