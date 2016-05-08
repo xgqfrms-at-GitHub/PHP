@@ -394,3 +394,10 @@ p.change_link{
 	width: 60%;
 	height: 15%;
 }
+
+/*captcha*/
+.youcaptcha{
+	background-image: url(images/captcha.png);
+	width: 32px;
+	height: 32px;
+}
