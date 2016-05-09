@@ -27,10 +27,10 @@
     <body>
         <div class="container">
             <header>
-                <h1>It's IMOOC<span>This Is King Show Time</span></h1>
-				<nav class="codrops-demos">
-					<span>Click <strong>"Join us"</strong> to Register the Imooc</span>
-				</nav>
+                <h1>DSQCW<span>|Data Structure Quality Course Website</span></h1>
+                <nav class="codrops-demos">
+                    <span><strong>DSQCW | 数据结构核心课程网站</strong></span>
+                </nav>
             </header>
             <section>				
                 <div id="container_demo" >
@@ -39,7 +39,7 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="doAction.php?act=login" autocomplete="on" method="post"> 
-                                <h1>Log in</h1> 
+                                <h1>登陆账号</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your username </label>
                                     <input id="username" name="username" required="required" type="text" placeholder="My Username"/>
@@ -64,7 +64,7 @@
 
                         <div id="register" class="animate form">
                             <form  action="doAction.php?act=reg" autocomplete="on" method="post"> 
-                                <h1> Sign up </h1> 
+                                <h1>注册账号</h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
                                     <input id="usernamesignup" name="username" required="required" type="text" placeholder="Mr.King" />

@@ -35,11 +35,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>DSQC<span>|Data Structure Quality Course</span></h1>
-			<nav class="codrops-demos">
-				<span><strong>DSQC | 数据结构核心课程网站</strong></span>
-                <!-- <div class="logo" title="banner">&nbsp;</div> -->
-			</nav>
+            <h1>DSQCW<span>|Data Structure Quality Course Website</span>| 数据结构核心课程网站</h1>
+                <nav class="codrops-demos">
+                    <!-- <span><strong>DSQCW | 数据结构核心课程网站</strong></span> -->
+                </nav>
         </header>
         <section>				
             <div id="container_demo" >
@@ -106,8 +105,7 @@
 								<a href="#tologin" class="to_register">登陆账号</a>
 							</p>
                         </form>
-                    </div>
-					
+                    </div>					
                 </div>
             </div>  
         </section>
