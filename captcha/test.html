@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>captcha</title>
+</head>
+<body>
+	<div>
+		<div>
+			<img src="./captcha.php" width="175" height="45" /><hr/>
+			<!-- 
+			captcha.php会自动使用$_SESSION['captcha']来保存验证码，请自行写代码在收到请求时验证相应字段。 
+			-->
+		</div>
+		<div>
+			<label>验证码：</label><br/>
+			<hr/>
+			<img id="captcha_img" style="border:1px sloid red;width:100px ;height:30px" src="./captcha.php?r=12345" />
+			<a href="javascript:void(0)" onclick="document.getElementById('captcha_img').src='./captcha.php?r='+Math.random()">看不清，换一个！</a>
+
+		</div>
+	</div>
+</body>
+</html>
