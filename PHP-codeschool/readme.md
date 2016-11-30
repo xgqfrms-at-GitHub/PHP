@@ -8,6 +8,8 @@ http://campus.codeschool.com/courses/try-php
 
 https://repl.it/site/blog/api-docs  
 
+https://repl.it/languages  
+repl.it - Online REPL, Compiler & IDE  
 
 https://repl.it/languages/php  
 
@@ -31,6 +33,13 @@ $country = 'Japan';
 $var = "@";
 echo ("xgqfrms".$var."xyz");
 ?>
+
+<?php
+
+$var = "@";
+echo ("xgqfrms $var xyz");
+?>
+
 
 ``` 
 
