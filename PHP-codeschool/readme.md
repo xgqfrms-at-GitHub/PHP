@@ -6,13 +6,13 @@ http://campus.codeschool.com/courses/try-php
 
 ## REPL for PHP
 
+https://repl.it/site/blog/api-docs  
+
+
 https://repl.it/languages/php  
 
 
-https://repl.it/Ebx9/0
-
-
-
+https://repl.it/Ebx9/0  
 
 
 ## PHP Manual
